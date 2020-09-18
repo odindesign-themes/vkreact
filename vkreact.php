@@ -142,4 +142,14 @@ function vkreact_translations_load() {
 
 add_action('plugins_loaded', 'vkreact_translations_load');
 
+/**
+ * Delete user reactions if a user is deleted
+ */
+function vkreact_user_reactions_delete($user_id) {
+  vkreact_delete_post_user_reactions($user_id);
+  vkreact_delete_postcomment_user_reactions($user_id);
+}
+
+add_action('deleted_user', 'vkreact_user_reactions_delete');
+
 ?>

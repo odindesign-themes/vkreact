@@ -63,6 +63,19 @@ function vkreact_delete_postcomment_user_reaction($args) {
 }
 
 /**
+ * Delete all user post comment reactions
+ * 
+ * @param int $user_id    ID of the user.
+ * @return int/boolean
+ */
+function vkreact_delete_postcomment_user_reactions($user_id) {
+  $PostComment_User_Reaction = new VKReact_PostComment_User_Reaction();
+
+  // number of affected rows on succesful delete, false on error
+  return $PostComment_User_Reaction->deleteUserReactions($user_id);
+}
+
+/**
  * Returns reactions associated to a post comment
  * 
  * @param int $postcomment_id    ID of the post comment to return reactions from
