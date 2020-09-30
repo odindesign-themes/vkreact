@@ -108,7 +108,7 @@ function vkreact_get_users_by_post_reaction($post_id, $reaction_id) {
   $users = [];
 
   foreach ($users_data as $user_data) {
-    $users[] = vikinger_get_member($user_data->user_id, false, false);
+    $users[] = absint($user_data->user_id);
   }
 
   return $users;
