@@ -3,7 +3,7 @@
  * Plugin Name: Vikinger Reactions
  * Plugin URI: http://odindesign-themes.com/
  * Description: Add reactions to your blog posts and comments.
- * Version: 1.0.1
+ * Version: 1.0.2
  * Author: Odin Design Themes
  * Author URI: https://themeforest.net/user/odin_design
  * License: https://themeforest.net/licenses/
@@ -20,7 +20,7 @@ if (!defined('ABSPATH')) {
 /**
  * Versioning
  */
-define('VKREACT_VERSION', '1.0.1');
+define('VKREACT_VERSION', '1.0.2');
 define('VKREACT_VERSION_OPTION', 'vkreact_version');
 
 /**
