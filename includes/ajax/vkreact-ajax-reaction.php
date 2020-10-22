@@ -9,6 +9,9 @@
  * Get all reactions
  */
 function vkreact_get_reactions_ajax() {
+  // nonce check, dies early if the nonce cannot be verified
+  check_ajax_referer('vikinger_ajax');
+  
   $result = vkreact_get_reactions();
 
   header('Content-Type: application/json');
