@@ -61,12 +61,6 @@ function vkreact_get_reactions() {
     $reaction = $reaction_item;
     $reaction->name = vkreact_translation_get_reaction_name($reaction->name);
     $reactions[] = $reaction;
-
-    // $reactions[] = [
-    //   'id'        => $reaction_item->id,
-    //   'name'      => vkreact_translation_get_reaction_name($reaction_item->name),
-    //   'image_url' => $reaction_item->image_url
-    // ];
   }
 
   return $reactions;

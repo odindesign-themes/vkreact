@@ -87,6 +87,7 @@ function vkreact_get_post_reactions($post_id) {
   $reactions = $Post_User_Reaction->getReactions($post_id);
 
   foreach ($reactions as $reaction) {
+    $reaction->name = vkreact_translation_get_reaction_name($reaction->name);
     $reaction->users = vkreact_get_users_by_post_reaction($post_id, $reaction->id);
   }
 
